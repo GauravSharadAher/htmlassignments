@@ -1,0 +1,21 @@
+
+#q1
+{
+    font-family:'Times New Roman', Times, serif;  
+   border-style: solid;
+   width: fit-content;
+   background-image: linear-gradient(120deg,white,lightgreen,green);
+    margin :auto;
+    /* margin-bottom :80vw;  */
+   padding: 10px
+
+}
+.gh
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    width: fit-content;
+    margin:auto;
+    background-image: linear-gradient(120deg,white,lightgreen,green);
+    padding: 5px
+}

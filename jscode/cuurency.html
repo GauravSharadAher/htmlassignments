@@ -1,0 +1,84 @@
+<html>
+    <h2 align="center" style ="font-family: 'Times New Roman', Times, serif;">Currency Calculator</h2>
+    <hr></hr>
+    <head>
+    <script>
+        function f1()
+        {
+        let x=document.getElementById("p1")
+        let i=document.getElementById("l1").value
+        let a1=document.getElementById("s1").value
+        let a2=document.getElementById("s2").value
+
+
+        switch(a1)
+        {
+            case "Dollar" :
+                if(a2=="Dollar"){
+                    x.innerHTML=i.concat("&#36"," = ",i,"&#36")
+                }
+                else if(a2=="Euro"){
+                    x.innerHTML=i.concat("&#36"," = ",i*(80/90),"&#8364")
+                }
+                else if(a2=="Rupee"){
+                    x.innerHTML=i.concat("&#36"," = ",i*80,"&#8377")
+                }
+                break;
+            case "Rupee" :
+            if(a2=="Dollar"){
+                    x.innerHTML=i.concat("&#8377"," = ",i/80,"&#36")
+                }
+                else if(a2=="Euro"){
+                    x.innerHTML=i.concat("&#8377"," = ",i/90,"&#8364")
+                }
+                else if(a2=="Rupee"){
+                    x.innerHTML=i.concat("&#8377"," = ",i,"&#8377")
+                }
+                break;
+            case "Euro" :
+            if(a2=="Dollar"){
+                    x.innerHTML=i.concat("&#8364"," = ",i*(90/80),"&#36")
+                }
+                else if(a2=="Euro"){
+                    x.innerHTML=i.concat("&#8364"," = ",i,"&#8364")
+                }
+                else if(a2=="Rupee"){
+                    x.innerHTML=i.concat( "&#8364"," = ", i*90,"&#8377")
+                }
+                break;
+            }
+        }
+
+
+    </script>
+    </head>
+
+     <body align="center" id="b1" background="./amol.jpg"  >
+        <div >
+           <div style="width :fit-content;border-style :solid; margin:auto ; padding: 25px;">
+            
+                <label for="Value"> <b>Enter Value :</b></label> <input type="Number" id="l1" name="Value" placeholder="Enter a number">
+            
+                <b>From :</b> <select id="s1"> 
+                        <option>select</option>
+                        <option>Dollar</option>
+                        <option>Rupee</option>
+                        <option>Euro</option>
+                    </select>
+
+                    <b>To :</b> <select id="s2"> 
+                        <option>select</option>
+                        <option>Dollar</option>
+                        <option>Rupee</option>
+                        <option>Euro</option>
+                    </select>
+       <br><br>
+       <b>Value of :</b><b><p   id="p1"></p></b>
+        <button  onclick="f1()">Convert</button>
+        
+        </div>
+    </div>
+    <style>
+      </style>
+    </body>
+</html>

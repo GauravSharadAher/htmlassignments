@@ -1,0 +1,47 @@
+<html>
+<head>
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <h1 align="center" style="border-style:solid;" class="gh">Calculate Age</h1>
+    <br>
+    <script >
+        function a()
+        {
+            let a=new Date(document.getElementById("d1").value)
+            let y=new Date()
+            
+           let y1=(y-a)/(1000*60*60*24*365)
+           let year=parseInt((y-a)/(1000*60*60*24*365))
+           let month=parseInt((y1-year)*12)
+           document.getElementById("p1").innerHTML=`Age is : ${year} Year ${month} Month`
+         }
+
+    </script>
+</head>
+    <body style="background-image: linear-gradient(150deg,lightblue,rgb(30, 148, 69))">
+        <div  id="q1">
+       <b> Enter a Date :<input type="date" id="d1" onchange="a()"/></b>
+       <b><p id="p1"></p> </b>
+    </div>
+    </body>
+
+    <style>
+         *{
+            margin: 0%;
+            padding: 0%
+        }
+        body
+        {    
+            position: absolute;
+            left: 40%;
+            top:25%
+        }
+       
+        
+        
+    </style>
+ 
+    
+
+
+
+</html>

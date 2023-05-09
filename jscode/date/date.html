@@ -1,0 +1,46 @@
+<html>
+<head>   
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <div  class="gh" style="border-style: solid;" >
+    <b><h1>Day Calculate</h1></b>
+    <br><br>
+</div>
+     
+
+<script>
+    let arr=["Sunday","Monday","Tuesday","Wednesday","Thusday","Friday" ,"Saturday"]
+    function d()
+    {
+        let ans=document.getElementById("d1").value
+        let a= new Date(ans)
+        let b=a.getDay()
+    
+        document.getElementById("p1").innerHTML=`${arr[b]}`        
+    }
+
+
+</script>
+</head>
+    <body class="gh" >
+        <div>
+        <b>Date :</b><input type="date" id="d1" onchange="d()" style="font-size: x-large">
+    </div><br>
+        <b ><p id="p1" ></p> </b>      
+        <style>
+                *{
+                   margin: 0%;
+                   padding: 0%
+               }
+               body
+               {    
+                   position: absolute;
+                   left: 40%;
+                   top:25%
+               }
+              
+               
+               
+           </style>
+         
+    </body>
+</html>

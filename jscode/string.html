@@ -1,0 +1,40 @@
+<html>
+<head>
+
+    <script>
+        function s1()
+        {
+        let s=document.getElementById("l1").value
+        document.getElementById("x1").innerHTML=s        
+        let b=s
+        return b
+        }
+        function s2(){
+            let v=s1()
+            document.getElementById("x1").innerHTML= `<b> ${v} </b>`
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <input type="text" placeholder="Name"  id="l1" /> 
+        <p style="color: red" id="x1"> </p>
+    
+</div>
+    <button onclick="s2()">Click</button>
+    
+   
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

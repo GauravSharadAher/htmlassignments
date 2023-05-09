@@ -1,0 +1,24 @@
+<html>
+
+
+<head>
+
+    <script>
+        function f1(){
+            let s = document.getElementById("l1").value
+            let x=s.toUpperCase().substring(0,1)
+            let y=s.toLowerCase().substring(1,s.length)
+            document.getElementById("x1").innerHTML= `${x+y}`
+        }
+        </script>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="l1" placeholder="Enter a String"/>
+        <p id ="x1"></p>
+    </div>
+    <button onclick="f1()"> Click</button>
+
+</body>
+</html>

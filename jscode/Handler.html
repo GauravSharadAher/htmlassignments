@@ -1,0 +1,96 @@
+<html>
+<head>
+    <h2 align="center"> Calculate Values </h2>
+    <hr></hr>
+    <script>
+        function handler(choice)
+        {
+            let v=parseInt(document.getElementById("n1").value)
+            let ans
+            if(isNaN(v)){
+                document.getElementById("p1").innerText="Enter number first!"
+                return;
+            }
+            else{
+            switch (choice) {
+                case "1":
+                    ans =v * v
+                    break;
+                case "2":
+                    ans =v * v * v
+                    break;
+                case "3":
+                    ans = v
+                    break;
+                default: ans="Enter value first"
+                    break;
+            }
+            document.getElementById("p1").innerHTML=ans
+        }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+<div id="d2" >
+    <table align="center" style="border-style: solid; padding:5px; margin:auto" id="t1">
+        <thead></thead>
+        <tbody>
+    <b><tr><td><label for="n1">Number :</label></td><td><input type="Number" id="n1" placeholder="Enter a number"  /></td></tr></b>
+    <b><tr><td><label for="s1">Square :</label></td><td><input type="radio" onclick="handler('1')" id="s1" name="yes"  /></td></tr></b>
+    <b> <tr><td><label for="s2">Cube :</label></td><td><input type="radio" onclick="handler('2')" id="s2" name="yes" /></td></tr></b>
+    <b> <tr><td><label for="s3">Number :</label></td><td><input type="radio" onclick="handler('3')" id="s3" name="yes" /></td></tr></b>
+     <br><br>
+
+    
+  
+    
+
+</tbody>
+</table>
+<br>
+<div id="d1" style="margin-left: 380; border-style:solid; border-color:black;width: 180px;padding: 5px; opacity: 80%;margin :auto;" >
+    <b>Value : </b><b><spam id="p1"></spam></b>
+    <br>
+    
+    </div>
+</div>
+<style>
+    #t1
+    {
+        background-image: linear-gradient(to bottom right, white,gray);
+        border-color :black ;
+        border-style :groove;
+        width: fit-content;
+        margin-left: 36vw ;
+        padding: 5px;
+        opacity: 85%;  
+        
+    }
+
+    #d1
+    {
+        background-image: linear-gradient(to bottom right,white,gray)
+    }
+
+    #d2
+    {
+        font-family :'Times New Roman', Times, serif;
+    }
+
+
+
+</style>
+
+
+
+
+
+
+</body>
+</html>
