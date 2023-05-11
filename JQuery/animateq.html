@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.4.js"></script>
+        <script >
+            $().ready(()=>{
+                $("#i1").click(()=>{
+                    $("#d1").animate({borderRadius : "80%"})
+                    $("#d1").animate({left :'80px'},"slow")
+                     $("#d1").animate({left :"20%"},"slow")
+                     $("#d1").animate({left :"30%"},"slow")
+                     $("#d1").animate({left :"40%"},"slow")
+                     $("#d1").fadeOut(3000)
+                     $("#d1").fadeIn(3000)
+                      $("#d1").animate({left: "30%"},"slow")
+                      $("#d1").animate({left: "20%"},"slow")
+                      $("#d1").animate({left: "10%"},"slow")
+                      $("#d1").animate({left: "5%"},"slow")
+
+                    // $("#d1").animate({right :"10%"})
+                   
+
+                 
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <input type="button" value="c" id="i1"/>
+        <div id="d1" style="border-style:solid;position: absolute;width: fit-content;padding: 10px;background-color: burlywood;color: darkred">
+            wake up to reality
+        </div>
+    </body>
+</html>

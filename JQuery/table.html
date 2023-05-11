@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.4.js"></script>
+        <script >
+            $().ready(()=>{
+                $("#b1").click(()=>{
+                   let num=$("#i1").val()
+                   let f=$("#i2").val()
+                   let t=$("#i3").val()
+                
+                   if(f==0)
+                    {}else{ 
+                        $("#t1").text("")
+                    for(let i=f;i<=t;i++){
+                       $("#t1").append(`<tr><td>${num} * ${i} =</td><td>${num*i}</td></tr>)`)
+                   }   
+                   
+                }
+            })
+        })
+        </script>
+    </head>
+    <body>
+         <form>
+                Table of:<input type="number" id="i1" />
+                from:<input type="number" id="i2" />
+                to:<input type="number" id="i3" /><br><br>
+                <input type="reset" value="clear" /> 
+         </form>
+           
+            <button id="b1">Show Table</button>
+            <table id="t1" border=1>
+                
+            </table>
+        
+    </body>
+</html>

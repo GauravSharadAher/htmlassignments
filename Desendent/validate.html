@@ -1,0 +1,95 @@
+<html>
+
+<head>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+    function validateIt()
+    {
+        let c1,c2,e1,a1
+        let area=$("#i5").val().toLowerCase()
+        let x=$("#t1").val()
+        let z=$("#t2").val()
+        let dob = new Date(z)
+        let d=parseInt(dob/(1000 * 60 *60 * 24 * 365))
+        let cur =new Date()
+        let y=parseInt((cur-dob) /(1000 * 60 *60 * 24 * 365))
+        let e=$("#t3").val()
+
+
+        // for username
+        if(x.trim()=="" || x.length < 3 || !isNaN(x))
+        {
+            alert("Name is invalid please avoid spaces and numeric form and Text must be greater than 2 character")
+            c1=false
+        }else{
+            c1= true
+             }
+        // for age
+        
+        if(y<18 || y>60 || isNaN(d) )
+        {
+            c2=false
+            alert("Age must be above 18 and less than 60!") 
+        }
+        else{
+            c2=true 
+             }
+
+        // for email verification
+        if(e.trim()=="")
+        {
+                alert("Please enter the email")
+                e1=false
+        }
+        else
+        for(i=0;i<e.length;i++){
+            if(e.charAt(i)=='@' && (e.charAt(e.length-3)=="." || e.charAt(e.length-4)==".")){
+                e1=true
+                break;
+            }
+            e1=false      
+        }
+        if(e1==false){
+            alert("Enter enter valid email address")
+        }
+       
+         //to check address
+         console.log((area.match("pune")==null))
+         if(!(area.match("pune")==null))
+         {
+            a1=true
+        }else{
+            a1=false
+            alert("City Pune not found")
+            }
+        
+            return c1 && c2 && e1 && a1
+            
+    }
+
+   
+</script>
+</head>
+<body>
+        <div  align="center"style="border-style:groove;padding:5px;width: fit-content;margin:auto">
+    <form id="f1" onsubmit="return validateIt()" action="../Login.html" style="padding: 10px">
+    <table  border="2" style="padding: 5px">
+        <thead></thead>
+        <tbody >
+       <tr><td><b> Username: </td><td><input type= "text" id="t1" name="Username"/></b><br></td></tr>
+        <tr><td><b> DOB: </td><td><input type="date" id="t2" name="DOB"  /></b><br></td></tr>
+        <tr><td><b> Email: </td><td><input type="text" id="t3" name="Email"  /></b><br></td></tr>
+        <tr><td> <b>Address: </td><td></b> <input type="text" id="i5"></td></tr>
+       
+    </tbody>
+    </table>
+    <button>Submit</button>
+       <br><br>
+         </form> 
+   
+
+</div>
+
+
+</html>

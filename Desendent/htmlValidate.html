@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <h1>Validation using Html </h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function check1(){
+            let a,b
+            let x= document.getElementById("d1")
+            let y=document.getElementById("t2")
+            // for date
+            if(x.checkValidity()){
+                a=true
+            }else{
+                a=false
+                document.getElementById("i1").innerText=x.validationMessage
+            }
+
+            // for text validation
+
+            if(y.checkValidity()){
+                b=true
+            }else{
+                b=false
+                document.getElementById("i2").innerText=y.validationMessage
+            }
+            if(a && b){
+                document.getElementById("i1").innerText="All ok"
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <form action="../thank.html">
+   Date : <input type="date" required id="d1" min="2023-06-06"  max="2024-06-06"/>
+    Job :<input type="text"  required id="t2" minlength="4" maxlength="10"/>
+    <p id="i1"></p>
+    <p id="i2"></p>
+<form>
+<button onclick="check1()">Submit</button>
+</form>
+</form>
+</body>
+</html>
